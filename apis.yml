@@ -1,7 +1,17 @@
 aid: stroma-medical
 name: Stroma Medical
-description: 'Stroma Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Strōma Medical Corporation is a clinical-stage medical device company headquartered in Irvine,
+  California, developing the Strōma Laser System — a patented laser technology that permanently
+  changes eye color by removing the thin layer of brown pigment on the anterior surface of the iris,
+  revealing the underlying amber, hazel, grey, blue or green color beneath. The in-office procedure
+  uses only topical anesthetic, takes under a minute per eye per treatment, and reveals its result
+  over three to four weeks. Strōma licenses the system to refractive surgeons and LASIK-certified
+  ophthalmologists rather than selling to consumers directly. The device is investigational and is
+  not available for sale or use in the United States, and the company filed a voluntary Chapter 11,
+  Subchapter V case in the U.S. Bankruptcy Court for the District of Delaware. Strōma publishes no
+  developer program, no public API, no SDKs and no machine-readable API contract of any kind; its
+  public web presence is a six-page WordPress marketing site.
 url: https://raw.githubusercontent.com/api-evangelist/stroma-medical/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +22,13 @@ created: '2026-08-29'
 modified: '2026-08-29'
 tags:
 - Company
+- Medical Devices
+- Health Care
+- Ophthalmology
+- Laser Systems
+- Clinical Stage
+- Surgical Devices
+- Life Sciences
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,44 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/stroma-medical-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.stromamedical.com/
+- type: PrivacyPolicy
+  url: https://www.stromamedical.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.stromamedical.com/terms-of-use/
+- type: Support
+  url: https://www.stromamedical.com/contact/
+- type: Plans
+  url: plans/stroma-medical-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/stroma-medical-rate-limits.yml
+- type: LLMsTxt
+  url: llms/stroma-medical-llms.txt
+x-enrichment:
+  date: '2026-08-29'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Strōma Medical is a clinical-stage medical DEVICE company whose product is a laser handpiece and
+    an in-office procedure licensed to ophthalmologists — its entire public presence is a six-page
+    WordPress marketing site, and the only machine-readable thing served anywhere on it is the
+    WordPress core /wp-json CMS default with zero published posts.
+  evidence:
+  - url: https://www.stromamedical.com/openapi.json
+    status: 404
+  - url: https://www.stromamedical.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.stromamedical.com/sitemap.xml
+    status: 200
+  - url: https://api.stromamedical.com/
+    status: '<dns nxdomain>'
+  - url: https://www.stromamedical.com/wp-json
+    status: 200
+  checked: '2026-08-29'

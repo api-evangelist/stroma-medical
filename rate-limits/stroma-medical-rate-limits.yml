@@ -1,0 +1,15 @@
+generated: '2026-08-29'
+method: searched
+source: https://www.stromamedical.com/
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No documented rate limits, because there is no published API to rate-limit. Strōma Medical
+  operates no developer portal, no API reference and no machine-readable contract; every spec and
+  discovery path probed on both of its hosts returned 404. Honest zero, not an unchecked field.
+evidence:
+- url: https://www.stromamedical.com/openapi.json
+  status: 404
+- url: https://www.stromamedical.com/api-docs
+  status: 404

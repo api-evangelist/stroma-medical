@@ -1,0 +1,75 @@
+generated: '2026-08-29'
+method: probed
+source: live HTTPS probes of every host named in apis.yml (2026-08-29)
+note: >-
+  Every /.well-known/ path probed on the only host Strōma Medical operates returned HTTP 404 with
+  the WordPress theme's HTML 404 body. NO WellKnown or SecurityTxt pointer is emitted in apis.yml,
+  because this file records an ABSENCE, not a served surface. Recorded here so a later run does not
+  have to re-probe from zero.
+hosts:
+- host: www.stromamedical.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: stromamedical.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+unresolved_hosts:
+- host: api.stromamedical.com
+  status: '<dns nxdomain>'
+- host: docs.stromamedical.com
+  status: '<dns nxdomain>'
+- host: developer.stromamedical.com
+  status: '<dns nxdomain>'
+other_findings:
+- surface: WordPress core REST API
+  url: https://www.stromamedical.com/wp-json
+  status: 200
+  note: >-
+    The marketing site runs WordPress and its core REST API root answers anonymously with 146 routes
+    across the wp/v2, oembed/1.0, wp-super-cache/v1, wp-site-health/v1, wp-block-editor/v1,
+    wp-abilities/v1 and frm-admin/v1 namespaces. This is the WordPress CMS default, not a product
+    API Strōma Medical designed, documented, versioned or offers to anyone — there is no developer
+    portal, reference, key issuance or support channel for it, and wp/v2/posts returns
+    x-wp-total: 0. It is recorded here as an honest observation and deliberately NOT registered as
+    an apis[] entry or wired to any contract pointer, because crediting the company with shipping an
+    API it never shipped is the error this pipeline exists to avoid.

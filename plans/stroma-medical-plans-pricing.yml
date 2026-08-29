@@ -1,0 +1,17 @@
+generated: '2026-08-29'
+method: searched
+source: https://www.stromamedical.com/
+plan_count: 0
+plans: []
+note: >-
+  Strōma Medical publishes no pricing page and no plans of any kind. The company is clinical-stage
+  and the Strōma Laser System is an investigational device that is not available for sale or use in
+  the United States; the stated business model licenses the system to refractive surgeons and
+  LASIK-certified ophthalmologists rather than listing prices publicly. The six pages the sitemap
+  advertises (home, in-the-news, privacy-policy, terms-of-use, eye-color-change-survey, contact)
+  contain no pricing, no tiers and no quotas. Honest zero, not an unchecked field.
+evidence:
+- url: https://www.stromamedical.com/sitemap.xml
+  status: 200
+- url: https://www.stromamedical.com/
+  status: 200
